@@ -207,7 +207,6 @@ footer {
 }
 
 
-/* TABLETS / SMALLER SCREENS */
 
 @media (max-width: 1200px) {
 
@@ -223,7 +222,6 @@ footer {
 }
 
 
-/* PHONES */
 
 @media (max-width: 700px) {
 
