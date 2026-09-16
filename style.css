@@ -35,6 +35,7 @@ body::before {
     z-index: -1;
 }
 
+
 /* HEADER */
 
 header {
@@ -73,6 +74,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
+
 /* MAIN */
 
 main {
@@ -81,6 +83,7 @@ main {
     margin: 0 auto;
     padding: 0 25px 90px;
 }
+
 
 /* PROJECTS */
 
@@ -110,6 +113,7 @@ article p {
     margin: 0 0 18px;
 }
 
+
 /* YOUTUBE VIDEOS */
 
 article iframe {
@@ -125,6 +129,7 @@ article a {
     color: #526400;
     font-size: 19px;
 }
+
 
 /* ABOUT ME */
 
@@ -142,11 +147,18 @@ article a {
     margin: 0 0 22px;
 }
 
-.about p {
+.about h3 {
+    color: #514720;
     font-size: 22px;
-    line-height: 1.55;
-    margin: 0;
+    margin: 22px 0 10px;
 }
+
+.about p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 0 15px;
+}
+
 
 /* CONTACT */
 
@@ -165,14 +177,22 @@ article a {
 }
 
 .contact p {
-    font-size: 22px;
-    line-height: 1.55;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 0 15px;
 }
 
+
+/* ABOUT + CONTACT LINKS */
+
+.about a,
 .contact a {
     color: #526400;
     font-size: 20px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
 }
+
 
 /* FOOTER */
 
@@ -186,9 +206,11 @@ footer {
     font-size: 18px;
 }
 
-/* SMALLER SCREENS */
+
+/* TABLETS / SMALLER SCREENS */
 
 @media (max-width: 1200px) {
+
     .projects {
         grid-template-columns: repeat(2, 1fr);
         gap: 65px 40px;
@@ -200,7 +222,15 @@ footer {
     }
 }
 
+
+/* PHONES */
+
 @media (max-width: 700px) {
+
+    header {
+        padding: 45px 20px;
+    }
+
     header h1 {
         font-size: 42px;
     }
@@ -231,5 +261,17 @@ footer {
     .contact {
         width: 100%;
         padding: 35px;
+    }
+
+    .about h2,
+    .contact h2 {
+        font-size: 34px;
+    }
+
+    .about p,
+    .contact p,
+    .about a,
+    .contact a {
+        font-size: 18px;
     }
 }
