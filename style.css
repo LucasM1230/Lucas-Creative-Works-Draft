@@ -1,7 +1,6 @@
 :root {
     --ink: #242317;
     --olive: #777600;
-    --lime: #c5cc6a;
     --cream: #f5f2c8;
     --paper: #ffffe7;
 }
@@ -39,57 +38,57 @@ body::before {
 /* HEADER */
 
 header {
-    width: 96%;
-    max-width: 2100px;
+    width: 98%;
+    max-width: 2400px;
     margin: 0 auto;
-    padding: 65px 25px 55px;
+    padding: 70px 20px 65px;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
     color: var(--olive);
-    font-size: 52px;
+    font-size: 60px;
 }
 
 header p {
-    margin: 10px 0 20px;
-    font-size: 20px;
+    margin: 12px 0 22px;
+    font-size: 23px;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    gap: 28px;
+    gap: 32px;
 }
 
 nav a {
     color: #4e4c13;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* MAIN SITE */
+/* MAIN */
 
 main {
-    width: 96%;
-    max-width: 2100px;
+    width: 98%;
+    max-width: 2400px;
     margin: 0 auto;
-    padding: 0 20px 80px;
+    padding: 0 25px 90px;
 }
 
 /* PROJECTS */
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 38px;
-    row-gap: 75px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 42px;
+    row-gap: 90px;
     align-items: start;
 }
 
@@ -99,17 +98,19 @@ article {
 
 article h2 {
     color: #514720;
-    font-size: 23px;
+    font-size: 27px;
     line-height: 1.2;
-    margin: 0 0 20px;
+    margin: 0 0 22px;
     text-align: center;
 }
 
 article p {
-    font-size: 18px;
-    line-height: 1.45;
-    margin: 0 0 15px;
+    font-size: 21px;
+    line-height: 1.5;
+    margin: 0 0 18px;
 }
+
+/* YOUTUBE VIDEOS */
 
 article iframe {
     display: block;
@@ -117,115 +118,118 @@ article iframe {
     aspect-ratio: 16 / 9;
     height: auto;
     border: 0;
-    margin: 18px 0 10px;
+    margin: 20px 0 12px;
 }
 
 article a {
     color: #526400;
-    font-size: 17px;
+    font-size: 19px;
 }
 
 /* ABOUT ME */
 
 .about {
-    max-width: 1050px;
-    margin: 100px auto 0;
-    padding: 45px 50px;
-    background: rgba(255, 255, 231, 0.65);
+    width: 70%;
+    max-width: 1300px;
+    margin: 120px auto 0;
+    padding: 55px 60px;
+    background: rgba(255, 255, 231, 0.68);
 }
 
 .about h2 {
     color: #514720;
-    font-size: 34px;
-    margin: 0 0 20px;
+    font-size: 40px;
+    margin: 0 0 22px;
 }
 
 .about p {
-    font-size: 19px;
-    line-height: 1.5;
+    font-size: 22px;
+    line-height: 1.55;
     margin: 0;
 }
 
 /* CONTACT */
 
 .contact {
-    max-width: 1050px;
-    margin: 30px auto 0;
-    padding: 40px 50px;
-    background: rgba(255, 255, 231, 0.65);
+    width: 70%;
+    max-width: 1300px;
+    margin: 35px auto 0;
+    padding: 50px 60px;
+    background: rgba(255, 255, 231, 0.68);
 }
 
 .contact h2 {
     color: #514720;
-    font-size: 34px;
-    margin: 0 0 20px;
+    font-size: 40px;
+    margin: 0 0 22px;
 }
 
 .contact p {
-    font-size: 19px;
-    line-height: 1.5;
+    font-size: 22px;
+    line-height: 1.55;
 }
 
 .contact a {
     color: #526400;
+    font-size: 20px;
 }
 
 /* FOOTER */
 
 footer {
-    margin-top: 60px;
-    padding: 30px;
+    margin-top: 70px;
+    padding: 35px;
     text-align: center;
     background: rgba(31, 31, 24, 0.9);
     color: #eeeeee;
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 
-/* TABLETS */
+/* SMALLER SCREENS */
 
 @media (max-width: 1200px) {
     .projects {
         grid-template-columns: repeat(2, 1fr);
-        gap: 55px 35px;
-    }
-}
-
-/* PHONES */
-
-@media (max-width: 700px) {
-    header {
-        padding: 40px 20px;
-    }
-
-    header h1 {
-        font-size: 38px;
-    }
-
-    header p {
-        font-size: 17px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .projects {
-        grid-template-columns: 1fr;
-        row-gap: 55px;
-    }
-
-    article h2 {
-        font-size: 24px;
-    }
-
-    article p {
-        font-size: 17px;
+        gap: 65px 40px;
     }
 
     .about,
     .contact {
-        padding: 30px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 42px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        row-gap: 60px;
+    }
+
+    article h2 {
+        font-size: 26px;
+    }
+
+    article p {
+        font-size: 18px;
+    }
+
+    .about,
+    .contact {
+        width: 100%;
+        padding: 35px;
     }
 }
