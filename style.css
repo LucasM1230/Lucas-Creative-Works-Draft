@@ -29,30 +29,31 @@ body {
 
 header {
     text-align: center;
-    padding: 70px 20px 55px;
+    padding: 65px 20px 55px;
 }
 
 header h1 {
     margin: 0;
     color: #7b7900;
-    font-size: 42px;
+    font-size: 46px;
 }
 
 header p {
-    margin: 12px 0 25px;
-    font-size: 18px;
+    margin: 12px 0 24px;
+    font-size: 19px;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 28px;
 }
 
 nav a {
     color: #4e4c13;
     font-weight: bold;
     text-decoration: none;
+    font-size: 16px;
 }
 
 nav a:hover {
@@ -63,19 +64,23 @@ nav a:hover {
 /* MAIN CONTENT */
 
 main {
-    width: 92%;
-    max-width: 1450px;
+    width: 98%;
+    max-width: 1900px;
     margin: 0 auto;
 }
 
 
-/* PROJECT LAYOUT */
+/* PROJECTS - HORIZONTAL FORMAT */
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 70px;
-    row-gap: 70px;
+
+    /* FOUR PROJECTS ACROSS LIKE THE OLD SITE */
+    grid-template-columns: repeat(4, 1fr);
+
+    column-gap: 35px;
+    row-gap: 65px;
+
     align-items: start;
 }
 
@@ -83,15 +88,22 @@ article {
     min-width: 0;
 }
 
+
+/* PROJECT TITLES */
+
 article h2 {
     color: #514720;
     font-size: 20px;
-    margin: 0 0 25px;
+    margin: 0 0 24px;
+    text-align: center;
 }
 
+
+/* PROJECT DESCRIPTIONS */
+
 article p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 17px;
+    line-height: 1.45;
 }
 
 article a {
@@ -99,14 +111,14 @@ article a {
 }
 
 
-/* YOUTUBE VIDEO THUMBNAILS */
+/* YOUTUBE VIDEOS */
 
 article iframe {
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
     height: auto;
-    margin-top: 20px;
+    margin-top: 18px;
     border: 0;
 }
 
@@ -114,19 +126,19 @@ article iframe {
 /* ABOUT ME */
 
 .about {
-    max-width: 760px;
-    margin: 90px auto 25px;
-    padding: 35px;
+    max-width: 900px;
+    margin: 100px auto 25px;
+    padding: 40px;
     background: rgba(245, 244, 194, 0.72);
 }
 
 .about h2 {
     margin-top: 0;
-    font-size: 28px;
+    font-size: 30px;
 }
 
 .about p {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.5;
 }
 
@@ -134,19 +146,19 @@ article iframe {
 /* CONTACT */
 
 .contact {
-    max-width: 760px;
+    max-width: 900px;
     margin: 0 auto 80px;
-    padding: 35px;
+    padding: 40px;
     background: rgba(245, 244, 194, 0.72);
 }
 
 .contact h2 {
     margin-top: 0;
-    font-size: 28px;
+    font-size: 30px;
 }
 
 .contact p {
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .contact a {
@@ -154,16 +166,30 @@ article iframe {
 }
 
 
-/* MOBILE */
+/* MEDIUM SCREENS */
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main {
+        width: 95%;
+    }
+}
+
+
+/* SMALL SCREENS */
+
+@media (max-width: 700px) {
 
     header {
-        padding-top: 45px;
+        padding-top: 40px;
     }
 
     header h1 {
-        font-size: 34px;
+        font-size: 35px;
     }
 
     .projects {
@@ -172,7 +198,7 @@ article iframe {
     }
 
     main {
-        width: 90%;
+        width: 92%;
     }
 
     .about,
