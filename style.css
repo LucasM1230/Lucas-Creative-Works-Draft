@@ -1,3 +1,11 @@
+:root {
+    --ink: #242317;
+    --olive: #777600;
+    --lime: #c5cc6a;
+    --cream: #f5f2c8;
+    --paper: #ffffe7;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -8,39 +16,45 @@ html {
 
 body {
     margin: 0;
-    color: #3d351b;
+    color: var(--ink);
     font-family: Georgia, "Times New Roman", serif;
 
     background: repeating-linear-gradient(
         90deg,
-        #e6e8ae 0px,
-        #e6e8ae 110px,
-        #c9d269 110px,
-        #c9d269 220px,
-        #e9e7ad 220px,
-        #e9e7ad 330px,
-        #cbc68c 330px,
-        #cbc68c 440px
+        #dce2a5 0 110px,
+        #c6cf70 110px 220px,
+        #e9e9b1 220px 330px,
+        #cfcb91 330px 440px
     );
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 235, 0.35);
+    z-index: -1;
+}
 
 /* HEADER */
 
 header {
+    width: 96%;
+    max-width: 2100px;
+    margin: 0 auto;
+    padding: 65px 25px 55px;
     text-align: center;
-    padding: 65px 20px 55px;
 }
 
 header h1 {
     margin: 0;
-    color: #7b7900;
-    font-size: 46px;
+    color: var(--olive);
+    font-size: 52px;
 }
 
 header p {
-    margin: 12px 0 24px;
-    font-size: 19px;
+    margin: 10px 0 20px;
+    font-size: 20px;
 }
 
 nav {
@@ -51,36 +65,31 @@ nav {
 
 nav a {
     color: #4e4c13;
-    font-weight: bold;
     text-decoration: none;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-
-/* MAIN CONTENT */
+/* MAIN SITE */
 
 main {
-    width: 98%;
-    max-width: 1900px;
+    width: 96%;
+    max-width: 2100px;
     margin: 0 auto;
+    padding: 0 20px 80px;
 }
 
-
-/* PROJECTS - HORIZONTAL FORMAT */
+/* PROJECTS */
 
 .projects {
     display: grid;
-
-    /* FOUR PROJECTS ACROSS LIKE THE OLD SITE */
     grid-template-columns: repeat(4, 1fr);
-
-    column-gap: 35px;
-    row-gap: 65px;
-
+    column-gap: 38px;
+    row-gap: 75px;
     align-items: start;
 }
 
@@ -88,108 +97,118 @@ article {
     min-width: 0;
 }
 
-
-/* PROJECT TITLES */
-
 article h2 {
     color: #514720;
-    font-size: 20px;
-    margin: 0 0 24px;
+    font-size: 23px;
+    line-height: 1.2;
+    margin: 0 0 20px;
     text-align: center;
 }
 
-
-/* PROJECT DESCRIPTIONS */
-
 article p {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.45;
+    margin: 0 0 15px;
 }
-
-article a {
-    color: #245f87;
-}
-
-
-/* YOUTUBE VIDEOS */
 
 article iframe {
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
     height: auto;
-    margin-top: 18px;
     border: 0;
+    margin: 18px 0 10px;
 }
 
+article a {
+    color: #526400;
+    font-size: 17px;
+}
 
 /* ABOUT ME */
 
 .about {
-    max-width: 900px;
-    margin: 100px auto 25px;
-    padding: 40px;
-    background: rgba(245, 244, 194, 0.72);
+    max-width: 1050px;
+    margin: 100px auto 0;
+    padding: 45px 50px;
+    background: rgba(255, 255, 231, 0.65);
 }
 
 .about h2 {
-    margin-top: 0;
-    font-size: 30px;
+    color: #514720;
+    font-size: 34px;
+    margin: 0 0 20px;
 }
 
 .about p {
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1.5;
+    margin: 0;
 }
-
 
 /* CONTACT */
 
 .contact {
-    max-width: 900px;
-    margin: 0 auto 80px;
-    padding: 40px;
-    background: rgba(245, 244, 194, 0.72);
+    max-width: 1050px;
+    margin: 30px auto 0;
+    padding: 40px 50px;
+    background: rgba(255, 255, 231, 0.65);
 }
 
 .contact h2 {
-    margin-top: 0;
-    font-size: 30px;
+    color: #514720;
+    font-size: 34px;
+    margin: 0 0 20px;
 }
 
 .contact p {
-    font-size: 17px;
+    font-size: 19px;
+    line-height: 1.5;
 }
 
 .contact a {
-    color: #245f87;
+    color: #526400;
 }
 
+/* FOOTER */
 
-/* MEDIUM SCREENS */
+footer {
+    margin-top: 60px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(31, 31, 24, 0.9);
+    color: #eeeeee;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* TABLETS */
 
 @media (max-width: 1200px) {
-
     .projects {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    main {
-        width: 95%;
+        gap: 55px 35px;
     }
 }
 
-
-/* SMALL SCREENS */
+/* PHONES */
 
 @media (max-width: 700px) {
-
     header {
-        padding-top: 40px;
+        padding: 40px 20px;
     }
 
     header h1 {
-        font-size: 35px;
+        font-size: 38px;
+    }
+
+    header p {
+        font-size: 17px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
     .projects {
@@ -197,12 +216,16 @@ article iframe {
         row-gap: 55px;
     }
 
-    main {
-        width: 92%;
+    article h2 {
+        font-size: 24px;
+    }
+
+    article p {
+        font-size: 17px;
     }
 
     .about,
     .contact {
-        padding: 25px;
+        padding: 30px;
     }
 }
